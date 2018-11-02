@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTester", "ModelTester\ModelTester.csproj", "{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelWrapper", "ModelWrapper\ModelWrapper.csproj", "{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Cntk.Vae", "Cntk.Vae.pyproj", "{4C0EB45D-5EB3-4438-BA1C-2BF784143B58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Debug|x64.ActiveCfg = Debug|x64
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Debug|x64.Build.0 = Debug|x64
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Release|x64.ActiveCfg = Release|x64
+		{62617F07-BD6F-46A1-9BF0-1DFAA8CEE41C}.Release|x64.Build.0 = Release|x64
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Debug|x64.ActiveCfg = Debug|x64
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Debug|x64.Build.0 = Debug|x64
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Release|x64.ActiveCfg = Release|x64
+		{4F022B3F-1331-4E8D-B1A8-CF2830B3B7AE}.Release|x64.Build.0 = Release|x64
+		{4C0EB45D-5EB3-4438-BA1C-2BF784143B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0EB45D-5EB3-4438-BA1C-2BF784143B58}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4C0EB45D-5EB3-4438-BA1C-2BF784143B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0EB45D-5EB3-4438-BA1C-2BF784143B58}.Release|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62082C50-DB99-4D13-B7E1-3BE1A734DD2D}
+	EndGlobalSection
+EndGlobal
