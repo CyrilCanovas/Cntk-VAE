@@ -1,8 +1,10 @@
 import sys
 import os
 import cntk as C
+
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+
 from cntk.train import Trainer, minibatch_size_schedule 
 from cntk.io import MinibatchSource, CTFDeserializer, StreamDef, StreamDefs, INFINITELY_REPEAT
 from cntk.device import cpu, try_set_default_device
@@ -14,6 +16,7 @@ from cntk.metrics import classification_error
 from cntk.train.training_session import *
 from cntk.logging import ProgressPrinter, TensorBoardProgressWriter
 import cntk.tests.test_utils
+
 import datetime
 
 C.tests.test_utils.set_device_from_pytest_env() # (only needed for our build system)
@@ -21,7 +24,7 @@ C.cntk_py.set_fixed_random_seed(1) # fix a random seed for CNTK components
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 isFast = True
-num_epochs = 128
+num_epochs = 128 * 100
 
 width_dim = 7
 height_dim = 129
@@ -32,6 +35,10 @@ output_dim = input_dim
 
 model_filename = os.path.join(dir_path,'binancevae.dnn')
 train_filename = os.path.join(dir_path,'pictureset_training.ctf')
+model_graph = os.path.join(dir_path,'binancevae.png')
+
+def displaynetwork(model):
+    C.logging.graph.plot(model, model_graph)
 
 def create_reader(path, is_training, input_dim, num_label_classes,max_sweeps=C.INFINITELY_REPEAT):
     return C.io.MinibatchSource(C.io.CTFDeserializer(path, C.io.StreamDefs(labels = C.io.StreamDef(field='L', shape=num_label_classes, is_sparse=False),
@@ -113,7 +120,7 @@ def train(reader_train,model,input,z_mean,z_log_var):
 
     # training config
     
-    minibatch_size = 8
+    minibatch_size = 4
     epoch_size = 40000 // minibatch_size        # 30000 samples is half the dataset size
     num_sweeps_to_train_with = 5 if isFast else 100
     num_samples_per_sweep = 60000
@@ -179,6 +186,7 @@ if create_model:
     features = C.input_variable(shape=input_dim)
     print('create model')
     model,z_mean,z_log_var = createmodel(features,latent_dim)
+    displaynetwork(model)
 
 else:
     model = C.load_model(model_filename)

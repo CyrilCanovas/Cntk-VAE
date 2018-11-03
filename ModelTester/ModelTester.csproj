@@ -77,6 +77,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Egnx.Tools\Egnx.Tools.csproj">
+      <Project>{0a4de3f8-5ace-4e77-b198-3895c1d239d0}</Project>
+      <Name>Egnx.Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModelWrapper\ModelWrapper.csproj">
       <Project>{4f022b3f-1331-4e8d-b1a8-cf2830b3b7ae}</Project>
       <Name>ModelWrapper</Name>
